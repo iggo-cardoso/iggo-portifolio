@@ -1,3 +1,4 @@
+/* SCROLL CARRROUSEL INFINITE --START */
 @keyframes scroll {
     0% {
         transform: translateX(0);
@@ -6,3 +7,23 @@
         transform: translateX(-100%);
     }
 }
+/* SCROLL CARRROUSEL INFINITE --END */
+
+/* SCROLL CARRROUSEL 2 INFINITE --START */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+/* SCROLL CARRROUSEL 2 INFINITE --END */
+
+/* ANIMAÇÃO DE GRADIENT --START */
+@keyframes animate-gradient {
+    to {
+        background-position: 200%;
+    }
+}
+/* ANIMAÇÃO DE GRADIENT --END */

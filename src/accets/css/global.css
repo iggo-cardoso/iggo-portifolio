@@ -13,6 +13,39 @@
   --background-main: #000000;
 }
 
+/* PROGRESSO DE ELEMENTO NA VIEWPORT --START */
+.progressive {
+  --progress: 0;
+  filter: blur(calc(20px * (1 - var(--progress))));
+  opacity: var(--progress);
+  transform: translateY(calc(60px * (1 - var(--progress))));
+}
+/* PROGRESSO DE ELEMENTO NA VIEWPORT --END */
+
+/* GRODIEND --START */
+.gradient {
+    background: linear-gradient(
+        to right,
+        #00aaa7,
+        #00709a,
+        #0071e3,
+        #6070fd,
+        #2a46ff,
+        #0099ff,
+        #008ead
+    );
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+}
+/* GRADIEND --END */
+
+
+
+/* LIMBO --START */
+
 /* BLUR NO SCROLL *//* 
 @supports (animation-timeline: view()) {
   .element {
@@ -26,9 +59,4 @@
   animation-timeline: view();
 } */
 
-.progressive {
-  --progress: 0;
-  filter: blur(calc(20px * (1 - var(--progress))));
-  opacity: var(--progress);
-  transform: translateY(calc(60px * (1 - var(--progress))));
-}
+/* LIMBO --END */
