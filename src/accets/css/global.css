@@ -1,0 +1,34 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&family=Raleway&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+        Helvetica, Arial, sans-serif;
+}
+
+:root {
+  --color-main: #FFFFFF;
+  --background-main: #000000;
+}
+
+/* BLUR NO SCROLL *//* 
+@supports (animation-timeline: view()) {
+  .element {
+    animation-timeline: view();
+    animation-duration: auto;
+  }
+}
+
+.autoBlur {
+  animation: autoBlurAnimation linear both;
+  animation-timeline: view();
+} */
+
+.progressive {
+  --progress: 0;
+  filter: blur(calc(20px * (1 - var(--progress))));
+  opacity: var(--progress);
+  transform: translateY(calc(60px * (1 - var(--progress))));
+}
