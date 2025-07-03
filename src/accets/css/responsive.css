@@ -1,3 +1,74 @@
-@media screen and (max-width: 700px) {
-  
+/* ================================ MEDIA QUERIES – RESPONSIVIDADE ================================ */
+
+@media screen and (max-width: 1020px) { 
+  .containment-main { 
+    .first-containment { 
+      .hero-info { 
+        margin-top: 30%;
+        h1 {
+          font-size: 37px;
+          max-width: 400px;
+          line-height: 37px;
+        }
+      
+        p {
+          max-width: 300px;
+          font-size: 1em;
+        }
+      }
+    }
+        
+    .static-image-background {
+      img {
+        top: 300px;
+        transform: scale(1.8);
+      }
+    }
+  } 
 }
+
+@media screen and (max-width: 700px) { 
+  .containment-main { 
+    .first-containment { 
+      .hero-info { 
+        h1 { 
+          font-size: 35px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .containment-main {
+    .first-containment {
+      .hero-info {
+        h1 {
+          font-size: 32px;
+        }
+        p {
+          font-size: 0.95em;
+        }
+      }
+    }
+  } 
+}
+
+@media (max-aspect-ratio: 16/9) { 
+  .containment-main { 
+    .galaxy-video-background {
+      width: auto; 
+      height: 100%;
+    }
+  }
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .containment-main { 
+    .galaxy-video-background {
+      width: 100%; 
+      height: auto;
+    }
+  }
+}
+

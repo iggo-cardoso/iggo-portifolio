@@ -26,13 +26,13 @@
 .gradient {
     background: linear-gradient(
         to right,
-        #00aaa7,
-        #00709a,
-        #0071e3,
+        #00fdf8,
+        #07bbff,
+        #0a84ff,
         #6070fd,
-        #2a46ff,
+        #0600fa,
         #0099ff,
-        #008ead
+        #1bd6ff
     );
     background-size: 200%;
     background-clip: text;
