@@ -24,8 +24,88 @@ body {
     padding-left: 60%;
     animation: scroll 40s linear infinite;
     line-height: 0;
+    font-weight: 800;
+    opacity: .2;
   } /* P */
 } /* INFO FIXED */
+
+header {
+  display: flex;
+  position: absolute;
+  top: 13px;
+  right: 0;
+  left: 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  height: 50px;
+  z-index: 999;
+  transition: 1s ease !important;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border-radius: 50px;
+    background-color: #000000;
+    backdrop-filter: blur(10px);
+    border: 1px solid #8888888c;
+    margin-right: -230px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    z-index: 1;
+    li {
+      list-style: none;
+      transition: 1s ease;
+      &:hover {
+        transform: translateY(2px);
+      }
+      &:hover a {
+        color: var(--brand-color);
+        font-weight: 700;
+      } /* HOVER */
+      a {
+        text-decoration: none;
+        color: white;
+        font-weight: 400;
+        transition: 0.3s;
+        margin: 0 10px;
+        transition: 1s ease;
+        font-size: .8em;
+      } /* A */
+    } /* LI */
+  } /* UL */
+  .logo-brand {
+    position: absolute;
+    left: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    img {
+      width: 80px;
+      margin: 0 15px;
+    } /*IMG */
+  } /* LOGI BRAND */
+  .button-containment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    z-index: 3;
+    button {
+      padding: 7px 10px;
+      border-radius: 8em;
+      background: #0071E3;
+      color: #ffffff;
+      border: none;
+      box-sizing: border-box;
+      &:nth-child(2) {
+        background: #ffffff25;
+        border: 1px solid #8888888c;
+      } /* NTH CHILD */
+    } /* BUTTON */
+  } /* BUTTON CONTAINMENT */
+} /* HEADER */
+
 
 .containment-main {
   position: relative;
@@ -147,7 +227,6 @@ body {
       width: 40%;
       overflow: hidden;
       margin-top: 78px;
-      
       .content {
         display: flex;
         width: max-content;

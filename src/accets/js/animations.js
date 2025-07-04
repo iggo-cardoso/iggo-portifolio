@@ -20,3 +20,18 @@ function updateProgressiveElements() {
 window.addEventListener("scroll", updateProgressiveElements);
 window.addEventListener("resize", updateProgressiveElements);
 window.addEventListener("load", updateProgressiveElements);
+//
+
+
+const infoFixed = document.querySelector('.info-fixed');
+const header = document.querySelector('header');
+
+window.addEventListener('scroll', ()=> {
+  if (scrollY > 40) {
+    infoFixed.style.transform = 'translateY(-100%)';
+    header.style.top = '0';
+  } else if (scrollY == 0) {
+    infoFixed.style.transform = 'translateY(0)';
+    header.style.top = '13px';
+  }
+});
