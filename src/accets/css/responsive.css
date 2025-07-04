@@ -4,7 +4,7 @@
   .containment-main { 
     .first-containment { 
       .hero-info { 
-        margin-top: 30%;
+        margin-top: 35%;
         h1 {
           font-size: 37px;
           max-width: 400px;
@@ -20,7 +20,7 @@
         
     .static-image-background {
       img {
-        top: 300px;
+        top: 350px;
         transform: scale(1.8);
       }
     }
@@ -33,10 +33,27 @@
       .hero-info { 
         h1 { 
           font-size: 35px;
+          margin: 25px auto;
+        } /* H1 */
+        
+        p {
+          margin: 25px auto;
         }
-      }
-    }
-  }
+        
+        button {
+          margin: 25px auto;
+          padding: 5px 15px;
+          font-size: .8em;
+          gap: 5px;
+        } /* BUTTON */
+      } /* HERO INFO */
+      
+      .carrousel-skills {
+        width: calc(100% - 40px);
+      } /* CARROUSEL SKILLS */
+      
+    } /* FIRST CONTAINMENT */
+  } /* CONTAINMENT MAIN */
 }
 
 @media screen and (max-width: 400px) {

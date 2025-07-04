@@ -44,7 +44,7 @@ body {
     top: 0;
     width: 100%;
     height: 2000px;
-    z-index: -1;
+    z-index: 1;
     overflow: hidden;
     
     img {
@@ -63,9 +63,7 @@ body {
     position: fixed;
     right: 0;
     bottom: 0;
-    z-index: 1;
-    mix-blend-mode: screen;
-    opacity: .5;
+    z-index: -1;
   } /* GALAXY VIDEO BACKGROUND */
 
   .first-containment {
@@ -113,6 +111,7 @@ body {
         margin-top: 40px;
         margin-bottom: 30px;
         text-align: center;
+        transition-duration: 1.5s;
       } /* H1 */
     
       p {
@@ -122,6 +121,7 @@ body {
         margin-bottom: 40px;
         font-size: 20px;
         text-align: center;
+        transition-duration: 2.5s;
       } /* P */
     
       button {
@@ -136,6 +136,7 @@ body {
         gap: 20px;
         font-weight: 700;
         margin: auto;
+        transition-duration: 3.5s;
         &:hover {
           box-shadow: 0 0 15px #72a1de81;
         } /* HOVER */
