@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 body {
-  background: var(--background-main);
+  bacground: var(--background-main);
   color: var(--color-main);
 }
 
@@ -144,6 +144,18 @@ header {
     right: 0;
     bottom: 0;
     z-index: -1;
+    display: none;
+  } /* GALAXY VIDEO BACKGROUND */
+  
+  #starfield {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    display: block;
+    border: 0;
+    outline: 0;
+    transform: scale(1.2);
   } /* GALAXY VIDEO BACKGROUND */
 
   .first-containment {
