@@ -6,16 +6,21 @@ function updateProgressiveElements() {
   elements.forEach(el => {
     const rect = el.getBoundingClientRect();
 
-    // Cálculo de quanto do elemento está visível
+    // Cálculo da visibilidade real do elemento
     const visibleTop = Math.max(0, rect.top);
     const visibleBottom = Math.min(windowHeight, rect.bottom);
     const visibleHeight = Math.max(0, visibleBottom - visibleTop);
 
     const totalHeight = Math.min(rect.height, windowHeight);
-    const progress = Math.min(1, visibleHeight / totalHeight);
+    const visibilityRatio = visibleHeight / totalHeight;
 
-    el.style.setProperty("--progress", progress.toFixed(3));
- });
+    // Só atualiza se o elemento estiver visível em mais de 30%
+    if (visibilityRatio >= 0.3) {
+      el.style.setProperty("--progress", visibilityRatio.toFixed(3));
+    } else {
+      el.style.setProperty("--progress", "0");
+    }
+  });
 }
 
 window.addEventListener("scroll", updateProgressiveElements);

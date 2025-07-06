@@ -18,7 +18,7 @@
   --progress: 0;
   filter: blur(calc(20px * (1 - var(--progress))));
   opacity: var(--progress);
-  transform: translateY(calc(60px * (1 - var(--progress))));
+  transform: translateY(calc(100px * (1 - var(--progress))));
 }
 /* PROGRESSO DE ELEMENTO NA VIEWPORT --END */
 
@@ -35,20 +35,24 @@
         #1bd6ff
     ); */
     background: linear-gradient(
-        to right,
-        #ffffff,
-        #b0b0b0,
-        #858585,
-        #676767,
-        #4b4b4b,
-        #676767,
-        #b0b0b0
-    );
+    to right,
+    #ffffff,
+    #d7e8ff,
+    #b6c9ff,
+    #95b1ff,
+    #0077ed,
+    #0144ff,
+    #0077ed,
+    #95b1ff,
+    #b6c9ff,
+    #d7e8ff,
+    #ffffff
+  );
     background-size: 200%;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: animate-gradient 2.5s linear infinite;
+    animation: animate-gradient 2s linear infinite;
 }
 /* GRADIEND --END */
 

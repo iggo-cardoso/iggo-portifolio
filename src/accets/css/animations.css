@@ -59,6 +59,7 @@
   }
 }
   
+  
 @keyframes typing {
   from {
     width: 0ch;
@@ -67,7 +68,7 @@
     width: 4.3ch;
   }
 }
-
+  
 @keyframes blink {
   50% {
     border-color: transparent;

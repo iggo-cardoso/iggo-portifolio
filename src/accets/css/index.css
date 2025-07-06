@@ -48,7 +48,6 @@ header {
     border-radius: 50px;
     background-color: #000000;
     backdrop-filter: blur(10px);
-    border: 1px solid #8888888c;
     margin-right: -230px;
     box-sizing: border-box;
     white-space: nowrap;
@@ -174,19 +173,40 @@ header {
       margin-top: 10%;
       justify-content: center;
       .hero-info-title {
-        color: #ffffff88;
-        padding: 5px 7px 5px 5px;
+        position: relative;
+        color: #ffffff;
+        padding: 7px 7px 7px 7px;
         border-radius: 50px;
-        width: 240px;
-        background-color: #161616;
+        width: 220px;
+        background: linear-gradient(-150deg,
+        #0077f7,
+        #0052f7,
+        #0015f7,
+        #5500f7,
+        #5500f7,
+        #00f746,
+        #ffffff
+        );
         display: flex;
         align-items: center;
         gap: 10px;
         margin: auto;
         font-size: .9em;
+        z-index: 9;
+        &:after {
+          position: absolute;
+          top: 1.3px;
+          left: 1.3px;
+          content: "";
+          width: calc(100% - 2.2px);
+          height: calc(100% - 2.4px);
+          background: #000000;
+          border-radius: 8em;
+          z-index: -1;
+        }
         img {
-          width: 27px;
-          height: 27px;
+          width: 20px;
+          height: 20px;
           object-fit: cover;
           border-radius: 8em;
           border: 1px solid #ffffff7e;
@@ -222,14 +242,14 @@ header {
     
       button {
         color: #000000;
-        padding: 7px 20px;
+        padding: 4px 15px;
         border-radius: 8em;
         border: none;
         background-color: #ffffff;
         transition: 0.3s;
         display: flex;
         align-items: center;
-        gap: 20px;
+        gap: 5px;
         font-weight: 700;
         margin: auto;
         transition-duration: 3.5s;
@@ -270,7 +290,8 @@ header {
     .title-section {
       transition-duration: 1s;
       text-align: center;
-      margin-top: 10px;
+      margin-top: 150px;
+      font-weight: 700;
     }
     .content {
       padding-top: 0;
