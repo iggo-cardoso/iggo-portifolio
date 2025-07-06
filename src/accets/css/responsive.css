@@ -45,7 +45,12 @@
       gap: 10px;
     } /* BUTTON CONTAINMENT */
   }
-  
+  .section-2 {
+    .content {
+      padding-left: 30px !important;
+      padding-right: 30px !important;
+    }
+  }
 }
 
 @media screen and (max-width: 755px) {
@@ -65,7 +70,13 @@
       gap: 10px;
     } /* BUTTON CONTAINMENT */
   }
-  
+  .containment-main {
+    .first-containment {
+      .carrousel-skills {
+        width: 90% !important;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 700px) {

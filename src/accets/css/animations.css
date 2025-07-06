@@ -27,3 +27,50 @@
     }
 }
 /* ANIMAÇÃO DE GRADIENT --END */
+
+/* LOADING --START */
+.loading {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: transparent;
+  background-color: #000000;
+  z-index: 900000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  transition: 1.2s linear;
+  transition-delay: 1.3s;
+  h1 {
+    transition: 1.4s linear;
+    overflow: hidden;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid #fff;
+    width: 0ch;
+    animation: typing .5s forwards, blink 0.7s step-end infinite;
+  }
+  &.hidden {
+    height: 0;
+  }
+}
+  
+@keyframes typing {
+  from {
+    width: 0ch;
+  }
+  to {
+    width: 4.3ch;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+/* LOADING --END */
