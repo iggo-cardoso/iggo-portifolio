@@ -24,7 +24,7 @@
 
 /* GRODIEND --START */
 .gradient {
-    background: linear-gradient(
+    /* background: linear-gradient(
         to right,
         #00fdf8,
         #07bbff,
@@ -33,6 +33,16 @@
         #0600fa,
         #0099ff,
         #1bd6ff
+    ); */
+    background: linear-gradient(
+        to right,
+        #ffffff,
+        #b0b0b0,
+        #858585,
+        #676767,
+        #4b4b4b,
+        #676767,
+        #b0b0b0
     );
     background-size: 200%;
     background-clip: text;

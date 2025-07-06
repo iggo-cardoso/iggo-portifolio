@@ -30,8 +30,8 @@
 @media screen and (max-width: 840px) {
   header {
     position: fixed;
-    background-color: #000000b0;
-    backdrop-filter: blur(20px);
+    background-color: linear-gradient(25deg, #ffffff00, #00000031);
+    backdrop-filter: blur(5px);
     
     ul {
       position: absolute;
@@ -56,8 +56,6 @@
 @media screen and (max-width: 755px) {
   header {
     position: fixed;
-    background-color: #000000b0;
-    backdrop-filter: blur(20px);
     
     ul {
       position: absolute;
@@ -82,12 +80,17 @@
 @media screen and (max-width: 700px) {
   header {
     position: fixed;
-    background-color: #000000b0;
-    backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .logo-brand {
+      position: absolute;
+      left: calc(55% - 80px);
+    }
     .menu-icon {
       display: inline;
-      position: relative;
-      margin-left: -10px;
+      position: absolute;
+      left: 10px;
       &:after {
         position: absolute;
         left: 0;
@@ -95,7 +98,7 @@
         content: '';
         width: 20px;
         height: 1.3px;
-        background: #ffffff;
+        background: var(--brand-color);
         border-radius: 8em;
       } /* AFTER */
       &:before {
@@ -105,7 +108,7 @@
         content: '';
         width: 20px;
         height: 1.3px;
-        background: #ffffff;
+        background: var(--brand-color);
         border-radius: 8em;
       } /* BEFORE */
     } /* MENU ICON */
@@ -113,7 +116,7 @@
       display: none;
     } /* UL */
     .button-containment {
-      gap: 10px;
+      display: none;
     } /* BUTTON CONTAINMENT */
   } /* HEADER */
     
