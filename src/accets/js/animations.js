@@ -177,3 +177,73 @@ setTimeout(function() {
 }, 2000);
 
 // CARREGAMENTO DA PÁGINA
+
+/*
+const elemento = document.getElementById("starfield");
+
+function limitar(valor, min, max) {
+  return Math.max(min, Math.min(max, valor));
+}
+
+function movimentoSutil(event) {
+  const gamma = limitar(event.gamma || 0, -10, 30); // esquerda/direita
+  const beta = limitar(event.beta || 0, 0, 180);     // frente/trás (corrigido)
+
+  // Corrigir beta para que 90 seja o centro neutro (posição plana)
+  const y = (beta - 90) * 0.2; // vertical
+  const x = gamma * 0.2;       // horizontal
+
+  elemento.style.transform = `translate(${x}px, ${y}px)`;
+}
+
+// Permissão iOS
+if (
+  typeof DeviceOrientationEvent !== "undefined" &&
+  typeof DeviceOrientationEvent.requestPermission === "function"
+) {
+  DeviceOrientationEvent.requestPermission()
+    .then(response => {
+      if (response === "granted") {
+        window.addEventListener("deviceorientation", movimentoSutil);
+      }
+    })
+    .catch(console.error);
+} else {
+  window.addEventListener("deviceorientation", movimentoSutil);
+}
+
+*/
+
+const card = document.getElementById("starfield");
+
+// Solicitar permissão no iOS 13+
+if (
+  typeof DeviceOrientationEvent !== "undefined" &&
+  typeof DeviceOrientationEvent.requestPermission === "function"
+) {
+  DeviceOrientationEvent.requestPermission()
+    .then((response) => {
+      if (response === "granted") {
+        window.addEventListener("deviceorientation", handleOrientation);
+      }
+    })
+    .catch(console.error);
+} else {
+  // Android ou navegadores que não requerem permissão
+  window.addEventListener("deviceorientation", handleOrientation);
+}
+
+function handleOrientation(event) {
+  const { beta, gamma } = event;
+
+  // Limitar valores
+  const clamp = (val, min, max) => Math.max(min, Math.min(max, val));
+
+  const rotateX = clamp(beta - 90, -20, 20);   // Inclinação para frente/trás
+  const rotateY = clamp(gamma, -20, 20);       // Inclinação para esquerda/direita
+
+  card.style.transform = `
+    rotateX(${rotateX * -1}deg)
+    rotateY(${rotateY}deg)
+  `;
+}
