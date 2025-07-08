@@ -1,0 +1,7 @@
+Preto profundo	#0D0D0D	Fundo ou botão principal (elegância absoluta)
+Dourado metálico	#D4AF37	Destaques, luz, bordas (luxo clássico)
+Ouro rosa (Rose Gold)	#B76E79	Elementos suaves e femininos de alto padrão
+Branco pérola	#FDFCF9	Tipografia clara ou fundos de contraste clean
+Cinza carbono	#1C1C1E	Alternativa moderna ao preto tradicional
+Azul noite premium	#0A0F2C	Paleta secundária sofisticada e tecnológica
+Champagne	#F7E7CE	Para detalhes luxuosos com leveza

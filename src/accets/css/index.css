@@ -88,17 +88,18 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 20px;
     z-index: 3;
     button {
-      padding: 7px 10px;
+      padding: 5px 10px;
       border-radius: 8em;
-      background: #0071E3;
+      background: #00a697;
       color: #ffffff;
       border: none;
       box-sizing: border-box;
       &:nth-child(2) {
-        background: #ffffff25;
+        background: #ffffff08;
+        backdrop-filter: blur(3px);
         border: 1px solid #8888888c;
       } /* NTH CHILD */
     } /* BUTTON */
@@ -181,11 +182,11 @@ header {
         width: 220px;
         background: linear-gradient(-150deg,
         #0077f7,
-        #0052f7,
-        #0015f7,
-        #5500f7,
-        #5500f7,
-        #00f746,
+        #00a697,
+        #00a697,
+        #00a697,
+        #00a697,
+        #00f7f0,
         #ffffff
         );
         display: flex;
@@ -242,11 +243,12 @@ header {
       } /* P */
     
       button {
+        position: relative;
         color: #000000;
         padding: 4px 15px;
         border-radius: 8em;
         border: none;
-        background-color: #ffffff;
+        background-color: #dcdcdc;
         transition: 0.3s;
         display: flex;
         align-items: center;
@@ -254,9 +256,27 @@ header {
         font-weight: 700;
         margin: auto;
         transition-duration: 3.5s;
+        border: 1.3px solid #fff;
+        overflow: hidden;
         &:hover {
           box-shadow: 0 0 15px #72a1de81;
         } /* HOVER */
+        .text {
+          z-index: 2;
+          display: flex;
+          align-items: center;
+        }
+        .light {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 40px;
+          height: 40px;
+          background: radial-gradient(circle, #ffffff 0%, #D4AF37 100%);
+          filter: blur(10px);
+          border-radius: 8em;
+          z-index: 0;
+        }
       } /* BUTTON */
       .carrousel-skills {
         width: 40%;
@@ -283,7 +303,7 @@ header {
       } /* CARROUSEL SKILLS*/
     } /* FIRST CONTAINMENT */
   } /* HERO INFO */  
-  .section-2 {
+  .idealizing {
     z-index: 200;
     width: 100%;
     height: ;

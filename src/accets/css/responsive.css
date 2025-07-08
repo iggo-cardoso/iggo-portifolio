@@ -39,13 +39,14 @@
       right: 25px;
       padding-right: 240px;
       margin-right: 0;
+      border: .9px solid #ffffff34;
     } /* UL */
     
     .button-containment {
       gap: 10px;
     } /* BUTTON CONTAINMENT */
   }
-  .section-2 {
+  .idealizing {
     .content {
       padding-left: 30px !important;
       padding-right: 30px !important;

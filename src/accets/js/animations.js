@@ -178,42 +178,6 @@ setTimeout(function() {
 
 // CARREGAMENTO DA PÁGINA
 
-/*
-const elemento = document.getElementById("starfield");
-
-function limitar(valor, min, max) {
-  return Math.max(min, Math.min(max, valor));
-}
-
-function movimentoSutil(event) {
-  const gamma = limitar(event.gamma || 0, -10, 30); // esquerda/direita
-  const beta = limitar(event.beta || 0, 0, 180);     // frente/trás (corrigido)
-
-  // Corrigir beta para que 90 seja o centro neutro (posição plana)
-  const y = (beta - 90) * 0.2; // vertical
-  const x = gamma * 0.2;       // horizontal
-
-  elemento.style.transform = `translate(${x}px, ${y}px)`;
-}
-
-// Permissão iOS
-if (
-  typeof DeviceOrientationEvent !== "undefined" &&
-  typeof DeviceOrientationEvent.requestPermission === "function"
-) {
-  DeviceOrientationEvent.requestPermission()
-    .then(response => {
-      if (response === "granted") {
-        window.addEventListener("deviceorientation", movimentoSutil);
-      }
-    })
-    .catch(console.error);
-} else {
-  window.addEventListener("deviceorientation", movimentoSutil);
-}
-
-*/
-
 const card = document.getElementById("starfield");
 
 // Solicitar permissão no iOS 13+
@@ -247,3 +211,29 @@ function handleOrientation(event) {
     rotateY(${rotateY}deg)
   `;
 }
+
+
+const button = document.querySelector('.magic-button');
+const light = button.querySelector('.light');
+
+function updateLight(x, y) {
+  const rect = button.getBoundingClientRect();
+  const posX = x - rect.left;
+  const posY = y - rect.top;
+
+  light.style.left = `${posX}px`;
+  light.style.top = `${posY}px`;
+}
+
+// Eventos para mouse
+button.addEventListener('mousemove', (e) => {
+  updateLight(e.clientX, e.clientY);
+});
+
+// Eventos para toque (mobile)
+button.addEventListener('touchmove', (e) => {
+  if (e.touches.length > 0) {
+    const touch = e.touches[0];
+    updateLight(touch.clientX, touch.clientY);
+  }
+});
