@@ -5,3 +5,35 @@ Branco pérola	#FDFCF9	Tipografia clara ou fundos de contraste clean
 Cinza carbono	#1C1C1E	Alternativa moderna ao preto tradicional
 Azul noite premium	#0A0F2C	Paleta secundária sofisticada e tecnológica
 Champagne	#F7E7CE	Para detalhes luxuosos com leveza
+
+
+
+
+
+
+
+
+🔹 PALETA DE CORES - INSPIRAÇÃO "LOKI" (Marvel / Branding Estratégico)
+
+# CORES PRINCIPAIS (Verdes Loki)
+Verde Esmeralda Escuro:   #005A44
+Verde Musgo Luxo:          #2D4739
+Verde Magia (Brilho):      #0B8A6F
+Verde Rúnico (Quase preto):#1C3B2A
+
+# CORES DE APOIO (Poder, Mistério, Sofisticação)
+Dourado Real:              #C2A13E
+Dourado Queimado:          #B0892D
+Preto Fosco:               #1A1A1A
+Cinza Nebuloso:            #B3B3B3
+Branco Puro (texto):       #FFFFFF
+
+# COMBINAÇÃO SUGERIDA:
+Primária:   #005A44   (Verde Loki)
+Secundária: #C2A13E   (Dourado Real)
+Fundo:      #1A1A1A   (Preto Fosco)
+Texto:      #FFFFFF   (Branco) ou #B3B3B3 (Cinza)
+
+# Ideal para:
+- Branding de marcas estratégicas, inteligentes e ousadas
+- Consultorias, fintechs, deeptechs, marcas de luxo alternativo

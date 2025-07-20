@@ -6,7 +6,6 @@ function updateProgressiveElements() {
   elements.forEach(el => {
     const rect = el.getBoundingClientRect();
 
-    // Cálculo da visibilidade real do elemento
     const visibleTop = Math.max(0, rect.top);
     const visibleBottom = Math.min(windowHeight, rect.bottom);
     const visibleHeight = Math.max(0, visibleBottom - visibleTop);
@@ -14,7 +13,6 @@ function updateProgressiveElements() {
     const totalHeight = Math.min(rect.height, windowHeight);
     const visibilityRatio = visibleHeight / totalHeight;
 
-    // Só atualiza se o elemento estiver visível em mais de 30%
     if (visibilityRatio >= 0.3) {
       el.style.setProperty("--progress", visibilityRatio.toFixed(3));
     } else {
@@ -180,7 +178,6 @@ setTimeout(function() {
 
 const card = document.getElementById("starfield");
 
-// Solicitar permissão no iOS 13+
 if (
   typeof DeviceOrientationEvent !== "undefined" &&
   typeof DeviceOrientationEvent.requestPermission === "function"
@@ -193,18 +190,17 @@ if (
     })
     .catch(console.error);
 } else {
-  // Android ou navegadores que não requerem permissão
+  
   window.addEventListener("deviceorientation", handleOrientation);
 }
 
 function handleOrientation(event) {
   const { beta, gamma } = event;
 
-  // Limitar valores
   const clamp = (val, min, max) => Math.max(min, Math.min(max, val));
 
-  const rotateX = clamp(beta - 90, -20, 20);   // Inclinação para frente/trás
-  const rotateY = clamp(gamma, -20, 20);       // Inclinação para esquerda/direita
+  const rotateX = clamp(beta - 90, -20, 20);   
+  const rotateY = clamp(gamma, -20, 20);       
 
   card.style.transform = `
     rotateX(${rotateX * -1}deg)
@@ -225,12 +221,12 @@ function updateLight(x, y) {
   light.style.top = `${posY}px`;
 }
 
-// Eventos para mouse
+
 button.addEventListener('mousemove', (e) => {
   updateLight(e.clientX, e.clientY);
 });
 
-// Eventos para toque (mobile)
+
 button.addEventListener('touchmove', (e) => {
   if (e.touches.length > 0) {
     const touch = e.touches[0];

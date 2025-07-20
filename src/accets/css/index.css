@@ -31,7 +31,7 @@ body {
 
 header {
   display: flex;
-  position: absolute;
+  position: fixed;
   top: 13px;
   right: 0;
   left: 0;
@@ -93,7 +93,7 @@ header {
     button {
       padding: 5px 10px;
       border-radius: 8em;
-      background: #00a697;
+      background: #005A44;
       color: #ffffff;
       border: none;
       box-sizing: border-box;
@@ -181,12 +181,15 @@ header {
         border-radius: 50px;
         width: 220px;
         background: linear-gradient(-150deg,
-        #0077f7,
-        #00a697,
-        #00a697,
-        #00a697,
-        #00a697,
-        #00f7f0,
+        #590cff,
+        #590cff,
+        #590cff,
+        #0c64ff,
+        #0C84FF,
+        #0C84FF,
+        #0c64ff,
+        #590cff,
+        #0c84ff,
         #ffffff
         );
         display: flex;
@@ -222,7 +225,7 @@ header {
       h1 {
         font-size: 60px;
         max-width: 600px;
-        font-weight: 700;
+        font-weight: 800;
         line-height: 70px;
         margin: auto;
         margin-top: 40px;
@@ -258,9 +261,6 @@ header {
         transition-duration: 3.5s;
         border: 1.3px solid #fff;
         overflow: hidden;
-        &:hover {
-          box-shadow: 0 0 15px #72a1de81;
-        } /* HOVER */
         .text {
           z-index: 2;
           display: flex;
@@ -272,9 +272,10 @@ header {
           left: 0;
           width: 40px;
           height: 40px;
-          background: radial-gradient(circle, #ffffff 0%, #D4AF37 100%);
+          background: radial-gradient(circle, #ffffff 0%, #000000db 100%);
           filter: blur(10px);
           border-radius: 8em;
+          transform: translate(-100%, -100%);
           z-index: 0;
         }
       } /* BUTTON */

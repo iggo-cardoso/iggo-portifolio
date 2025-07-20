@@ -11,7 +11,7 @@
 :root {
   --color-main: #FFFFFF;
   --background-main: #000000;
-  --brand-color: #00a697;
+  --brand-color: #0C84FF;
 }
 
 /* PROGRESSO DE ELEMENTO NA VIEWPORT --START */
@@ -35,18 +35,19 @@
         #0099ff,
         #1bd6ff
     ); */
+    font-weight: 800;
     background: linear-gradient(
     to right,
     #ffffff,
-    #9fdfd9,
-    #00bead,
-    #00deca,
-    #00a697,
+    #0c84ff,
+    #0c3fff,
+    #0c64ff,
+    #0C84FF,
     #ffffff,
-    #00a697,
-    #00deca,
-    #00bead,
-    #9fdfd9,
+    #0C84FF,
+    #0c64ff,
+    #0c3fff,
+    #0c84ff,
     #ffffff
   );
     background-size: 200%;
