@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "https://iggo-company.netlify.app/*"
+  to = "https://iggostudios.com.br"
+  status = 301
+  force = true
